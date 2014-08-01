@@ -31,6 +31,8 @@ A rudimentary deployment system for Heroku is included.
 
 ### To deploy to Heroku:
 
+Build and serve the project locally in production mode:
+
 	gulp serve:dist
 
 Make sure everything looks good, then:
