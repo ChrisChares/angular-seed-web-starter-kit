@@ -1,2 +1,2 @@
 var gulp = require('gulp');
-gulp.task('heroku:production', ['default']);
+gulp.task('heroku:production', ['html', 'images', 'fonts', 'copy']);
