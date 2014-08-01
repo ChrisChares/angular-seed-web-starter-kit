@@ -7,8 +7,7 @@ This project is currently using Web Starter Kit v0.4.0
 
 Wiredep is used so you don't have to manually add `<script>` tags for bower dependencies
 
-A rudimentary deployment system for Heroku is included.  At the moment, these deployments will only serve out of the ./app folder, not the ./dist folder.  As such (and a litany of other reasons) you should not use this in production.
-
+A rudimentary deployment system for Heroku is included. 
 
 ### To use:
 
@@ -32,9 +31,15 @@ A rudimentary deployment system for Heroku is included.  At the moment, these de
 
 ### To deploy to Heroku:
 
-Assuming you're all commited, you have a Heroku account and have the [Heroku Toolbox](https://toolbelt.heroku.com/).  Start with `gulp` if you haven't run that or `gulp serve` already.
+	gulp serve:dist
+
+Make sure everything looks good, then:
+
+Assuming you're all commited, you have a Heroku account and the [Heroku Toolbox](https://toolbelt.heroku.com/).
 
 	heroku create
+	heroku config:set BUILDPACK_URL=https://github.com/timdp/heroku-buildpack-nodejs-gulp.git
+	heroku config:set NODE_ENV=production
 	git push heroku master
 	heroku ps:scale web=1
 
