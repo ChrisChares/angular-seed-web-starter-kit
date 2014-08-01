@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="myApp"> 
+<html lang="en"> 
   <head>
     <meta charset="utf-8">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -45,7 +45,7 @@
     <!-- bower:css -->
     <!-- endbower -->
   </head>
-  <body>
+  <body ng-app="myApp">
   <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="menu"></button>
@@ -68,7 +68,9 @@
     <main>
       <div ng-view>
       </div>
-      <div>Angular seed app: v<span app-version></span></div>
+      <div>
+        Angular seed app: v<span app-version></span>
+      </div>
     </main>
     
     <!-- Built with love using Web Starter Kit -->
@@ -77,11 +79,8 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-
     <!-- Do not manually modify this -->
+    <!-- build:js scripts/vendor.min.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -91,12 +90,17 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
     <!-- endbower -->
+    <!-- endbuild-->
 
+    <!-- build:js scripts/main.min.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/services.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/filters.js"></script>
     <script src="scripts/directives.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>

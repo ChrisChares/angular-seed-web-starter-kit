@@ -5,6 +5,8 @@ A child of:
 
 This project is currently using Web Starter Kit v0.4.0
 
+Wiredep is used so you don't have to manually add `<script>` tags for bower dependencies
+
 A rudimentary deployment system for Heroku is included.  At the moment, these deployments will only serve out of the ./app folder, not the ./dist folder.  As such (and a litany of other reasons) you should not use this in production.
 
 
